@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98" height="28" viewBox="0 0 98 28" role="img" aria-label="FastAPI"><style>svg{--tx:#1a1a1a;--mu:#666660;--ac:#b84700;--bd:#dddddd;--sf:#faf9f2;--grid:#e8e8e0;--on:#ffffff}@media(prefers-color-scheme:dark){svg{--tx:#e6edf3;--mu:#8b949e;--ac:#b84700;--bd:#30363d;--sf:#161b22;--grid:#21262d;--on:#ffffff}}
+.d{font-family:'Unica One', Impact, 'Haettenschweiler', 'Arial Narrow', sans-serif} .b{font-family:'Supreme', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif} .m{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+.tx{fill:var(--tx)} .mu{fill:var(--mu)} .ac{fill:var(--ac)}
+.kick{font-size:10.5px;letter-spacing:2.4px;font-weight:500}
+.lab{font-size:9px;letter-spacing:1.6px}
+.card{fill:var(--sf);stroke:var(--bd);stroke-width:1}
+.in{animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+    .chip{fill:var(--sf);stroke:var(--bd);stroke-width:1}
+    .glyph{fill:var(--ac)}
+    </style><rect x="0.5" y="0.5" width="97" height="27" rx="4" class="chip"/><g transform="translate(13,7) scale(0.58)"><path d="M12 .0387C5.3729.0384.0003 5.3931 0 11.9988c-.001 6.6066 5.372 11.9628 12 11.9625 6.628.0003 12.001-5.3559 12-11.9625-.0003-6.6057-5.3729-11.9604-12-11.96m-.829 5.4153h7.55l-7.5805 5.3284h5.1828L5.279 18.5436q2.9466-6.5444 5.892-13.0896" class="glyph"/></g><text x="37" y="18.5" class="b tx" font-size="11.5">FastAPI</text></svg>

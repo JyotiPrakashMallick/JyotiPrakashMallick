@@ -1,0 +1,148 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Profile README — preview</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:#1c1c1c}
+  .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#333}
+  .bar{font:11px/1 ui-monospace,Menlo,monospace;letter-spacing:2px;padding:10px 14px;color:#9b9b9b;background:#101010;border-bottom:1px solid #333}
+  .dark{color-scheme:dark;background:#0d1117;color:#e6edf3}
+  .light{color-scheme:light;background:#ffffff;color:#1f2328}
+  .readme{max-width:960px;margin:0 auto;padding:26px 30px 60px}
+  .card{border:1px solid;border-radius:6px}
+  .dark .card{border-color:#30363d} .light .card{border-color:#d1d9e0}
+  .filename{font:12px/1 ui-monospace,Menlo,monospace;padding:12px 16px;border-bottom:1px solid}
+  .dark .filename{border-color:#30363d;color:#8b949e} .light .filename{border-color:#d1d9e0;color:#59636e}
+  .body{padding:22px 26px 30px}
+  img{max-width:100%;vertical-align:middle}
+  img[width="100%"]{display:block;margin:10px 0}
+  a img{margin:0 4px 6px 0}
+  img[height="28"]{margin:0 3px 5px 0}
+  h3{font-size:16px;margin:26px 0 12px;padding-bottom:7px;border-bottom:1px solid}
+  .dark h3{border-color:#30363d} .light h3{border-color:#d1d9e0}
+  p{margin:14px 0} ul{margin:12px 0;padding-left:22px} li{margin:6px 0}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px}
+  td{border:1px solid;padding:7px 12px;vertical-align:top}
+  .dark td{border-color:#30363d} .light td{border-color:#d1d9e0}
+  .dark tr:nth-child(even){background:#161b22} .light tr:nth-child(even){background:#f6f8fa}
+  code{font:11.5px ui-monospace,Menlo,monospace;padding:2px 6px;border-radius:4px}
+  .dark code{background:#262c36;color:#e6edf3} .light code{background:#eff1f3;color:#1f2328}
+  a{text-decoration:none} .dark a{color:#4493f8} .light a{color:#0969da}
+  img[align="right"]{float:right;margin:4px 0 14px 20px;border-radius:5px}
+  img[align="left"]{float:left;margin:4px 20px 14px 0;border-radius:5px}
+</style>
+
+<div class="wrap">
+  <section class="pane dark">
+    <div class="bar">GITHUB — DARK</div>
+    <div class="readme"><div class="card">
+      <div class="filename">JyotiPrakashMallick / README.md</div>
+      <div class="body" id="dark-body"></div>
+    </div></div>
+  </section>
+  <section class="pane light">
+    <div class="bar">GITHUB — LIGHT</div>
+    <div class="readme"><div class="card">
+      <div class="filename">JyotiPrakashMallick / README.md</div>
+      <div class="body" id="light-body"></div>
+    </div></div>
+  </section>
+</div>
+
+<template id="tpl"><img src="../assets/header.svg" alt="JYOTI PRAKASH MALLICK — Lead Performance & Scalability Engineer" width="100%" />
+
+<p>
+<a href="https://jyotiprakash.github.io/"><img src="../assets/links/portfolio.svg" height="32" alt="Portfolio" /></a>
+<a href="https://www.linkedin.com/in/jyoti-prakash-mallick"><img src="../assets/links/linkedin.svg" height="32" alt="LinkedIn" /></a>
+<a href="https://jyotiprakash.github.io/"><img src="../assets/links/writing.svg" height="32" alt="Writing" /></a>
+<a href="https://www.linkedin.com/in/jyoti-prakash-mallick"><img src="../assets/links/resume.svg" height="32" alt="Résumé" /></a>
+</p>
+<img src="../assets/ticker.svg" alt="Last shipped, current focus, last refreshed" width="100%" />
+
+<p>Systems are transitioning from single-threaded demos to enterprise-scale AI platforms where
+reliability, high throughput, and fault tolerance are non-negotiable. That shift requires
+engineers who obsess over performance engineering, distributed orchestration, bottlenecks,
+and observability as much as model capability. That's the work I do.</p>
+
+<img align="right" src="../assets/reading.gif" width="200" alt="" />
+
+<h3>What that looks like in numbers</h3>
+
+<ul><li><b>Sub-100ms P99 latency SLAs</b> across distributed AI microservices handling millions of daily records and real-time transaction streams.</li>
+<li><b>Automated enterprise load testing harnesses</b> with custom JMeter telemetry listeners streaming real-time metrics to Azure Cosmos DB & SQL Server.</li>
+<li><b>Elastic containerized architectures on AWS ECS & Azure</b> with automated Keptn SLI performance validation gates built into CI/CD pipelines.</li>
+</ul>
+<br clear="right" />
+
+<img src="../assets/timeline.svg" alt="Work timeline — Auditoria.AI, Cloud & Performance Engineering, Systems Automation" width="100%" />
+
+<h3>Building</h3>
+
+<table>
+<tr><td><b><a href="https://github.com/JyotiPrakashMallick/Jmeter-Listener-CosmosDB">Jmeter-Listener-CosmosDB</a></b></td><td><code>SHIPPING</code></td><td>Abstract listener for Apache JMeter to stream real-time test execution metrics directly to Azure Cosmos DB.</td></tr>
+<tr><td><b><a href="https://github.com/JyotiPrakashMallick/selenium-grid-ecs">selenium-grid-ecs</a></b></td><td><code>SHIPPING</code></td><td>Highly scalable Selenium Grid deployment on AWS ECS using Fargate Spot Containers for distributed testing.</td></tr>
+<tr><td><b><a href="https://github.com/JyotiPrakashMallick/pac-sliprovider">pac-sliprovider</a></b></td><td><code>SHIPPING</code></td><td>Keptn SLI Provider built for automated performance evaluation and continuous deployment quality gates.</td></tr>
+<tr><td><b><a href="https://github.com/JyotiPrakashMallick/datagen">datagen</a></b></td><td><code>EXPLORING</code></td><td>High-throughput synthetic data generator designed to create coherent test data at scale for enterprise benchmarks.</td></tr>
+</table>
+
+<h3>Open source contribution</h3>
+
+<p>Issues and pull requests filed upstream — mostly orchestration edge cases and failure
+modes found while building on these.</p>
+
+<p>
+<a href="https://github.com/langchain-ai/langgraph"><img src="../assets/oss/langchain-ai.svg" height="58" alt="LangGraph" /></a>
+<a href="https://github.com/crewAIInc/crewAI"><img src="../assets/oss/crewAIInc.svg" height="58" alt="CrewAI" /></a>
+<a href="https://github.com/ollama/ollama"><img src="../assets/oss/ollama.svg" height="58" alt="Ollama" /></a>
+<a href="https://github.com/langflow-ai/langflow"><img src="../assets/oss/langflow-ai.svg" height="58" alt="Langflow" /></a>
+<a href="https://github.com/agno-agi/agno"><img src="../assets/oss/agno-agi.svg" height="58" alt="Agno" /></a>
+<a href="https://github.com/h2oai/h2ogpt"><img src="../assets/oss/h2oai.svg" height="58" alt="h2oGPT" /></a>
+<a href="https://github.com/browser-use/browser-use"><img src="../assets/oss/browser-use.svg" height="58" alt="Browser Use" /></a>
+</p>
+
+<h3>Activity</h3>
+
+<img src="../assets/activity.svg" alt="Daily contribution activity over the last 12 months" width="100%" />
+
+<img src="../assets/stats.svg" alt="Last 52 weeks — contributions, busiest week, repos, stars, upstream projects" width="100%" />
+
+<img src="../assets/lifetime.svg" alt="All time — contributions, commits, pull requests, longest streak, per-year breakdown" width="100%" />
+
+<h3>Stack</h3>
+
+<p>
+<img src="../assets/stack/python.svg" height="28" alt="Python" />
+<img src="../assets/stack/docker.svg" height="28" alt="Docker" />
+<img src="../assets/stack/fastapi.svg" height="28" alt="FastAPI" />
+<img src="../assets/stack/pytorch.svg" height="28" alt="PyTorch" />
+<img src="../assets/stack/huggingface.svg" height="28" alt="Transformers" />
+<img src="../assets/stack/langchain.svg" height="28" alt="LangChain" />
+<img src="../assets/stack/langgraph.svg" height="28" alt="LangGraph" />
+<img src="../assets/stack/anthropic.svg" height="28" alt="Claude" />
+<img src="../assets/stack/openai.svg" height="28" alt="OpenAI" />
+<img src="../assets/stack/qdrant.svg" height="28" alt="Qdrant" />
+<img src="../assets/stack/mongodb.svg" height="28" alt="MongoDB" />
+<img src="../assets/stack/mlflow.svg" height="28" alt="MLflow" />
+<img src="../assets/stack/ollama.svg" height="28" alt="Ollama" />
+<img src="../assets/stack/aws.svg" height="28" alt="AWS" />
+<img src="../assets/stack/azure.svg" height="28" alt="Azure" />
+<img src="../assets/stack/githubactions.svg" height="28" alt="GitHub Actions" />
+</p>
+<br clear="all" />
+
+<img align="left" src="../assets/hakase.gif" width="200" alt="" />
+
+<p>Most of what I build starts as an architectural question under load — so I benchmark it,
+stress it, and engineer what survives. Everything above refreshes itself nightly from
+the GitHub API; nothing here is a badge service.</p>
+
+<p>If something I've built is useful to you, or wrong, feel free to open an issue or connect.</p>
+
+<br clear="all" />
+</template>
+
+<script>
+  const tpl = document.getElementById('tpl').innerHTML;
+  document.getElementById('dark-body').innerHTML = tpl;
+  document.getElementById('light-body').innerHTML = tpl;
+</script>

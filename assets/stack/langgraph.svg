@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="28" viewBox="0 0 112 28" role="img" aria-label="LangGraph"><style>svg{--tx:#1a1a1a;--mu:#666660;--ac:#b84700;--bd:#dddddd;--sf:#faf9f2;--grid:#e8e8e0;--on:#ffffff}@media(prefers-color-scheme:dark){svg{--tx:#e6edf3;--mu:#8b949e;--ac:#b84700;--bd:#30363d;--sf:#161b22;--grid:#21262d;--on:#ffffff}}
+.d{font-family:'Unica One', Impact, 'Haettenschweiler', 'Arial Narrow', sans-serif} .b{font-family:'Supreme', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif} .m{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+.tx{fill:var(--tx)} .mu{fill:var(--mu)} .ac{fill:var(--ac)}
+.kick{font-size:10.5px;letter-spacing:2.4px;font-weight:500}
+.lab{font-size:9px;letter-spacing:1.6px}
+.card{fill:var(--sf);stroke:var(--bd);stroke-width:1}
+.in{animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+    .chip{fill:var(--sf);stroke:var(--bd);stroke-width:1}
+    .glyph{fill:var(--ac)}
+    </style><rect x="0.5" y="0.5" width="111" height="27" rx="4" class="chip"/><g transform="translate(13,7) scale(0.58)"><path d="M5 19H10A5 5 0 115 14ZM19 14A5 5 0 1114 19H19ZM10 5A5 5 0 105 10V5ZM19 5V10A5 5 0 1014 5Z" class="glyph"/></g><text x="37" y="18.5" class="b tx" font-size="11.5">LangGraph</text></svg>

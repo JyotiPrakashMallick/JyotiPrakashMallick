@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="34" viewBox="0 0 900 34" role="img" aria-label="live status"><style>svg{--tx:#1a1a1a;--mu:#666660;--ac:#b84700;--bd:#dddddd;--sf:#faf9f2;--grid:#e8e8e0;--on:#ffffff}@media(prefers-color-scheme:dark){svg{--tx:#e6edf3;--mu:#8b949e;--ac:#b84700;--bd:#30363d;--sf:#161b22;--grid:#21262d;--on:#ffffff}}
+.d{font-family:'Unica One', Impact, 'Haettenschweiler', 'Arial Narrow', sans-serif} .b{font-family:'Supreme', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif} .m{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+.tx{fill:var(--tx)} .mu{fill:var(--mu)} .ac{fill:var(--ac)}
+.kick{font-size:10.5px;letter-spacing:2.4px;font-weight:500}
+.lab{font-size:9px;letter-spacing:1.6px}
+.card{fill:var(--sf);stroke:var(--bd);stroke-width:1}
+.in{animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+    .bar{fill:var(--sf)} .edge{stroke:var(--bd);stroke-width:1}
+    .dot{fill:var(--ac);animation:pulse 2s ease-in-out infinite}
+    .halo{fill:var(--ac);opacity:.3;animation:halo 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+    @keyframes halo{0%{opacity:.3;r:4}70%,100%{opacity:0;r:11}}
+    </style><rect x="0" y="0" width="900" height="34" class="bar"/>
+<line x1="0" y1="0.5" x2="900" y2="0.5" class="edge"/><line x1="0" y1="33.5" x2="900" y2="33.5" class="edge"/>
+<circle cx="20" cy="17" r="4" class="halo"/><circle cx="20" cy="17" r="3" class="dot"/>
+<text x="38" y="22" class="m lab mu">LAST SHIPPED</text><text x="136" y="22" class="m tx" font-size="11">—</text>
+<text x="380" y="22" class="m lab mu">NOW</text><text x="415" y="22" class="m tx" font-size="11">Auditoria.AI · Lead Performance Scalability Engineer</text>
+<text x="880" y="22" text-anchor="end" class="m lab mu">REFRESHED 20 OCT 2026</text></svg>

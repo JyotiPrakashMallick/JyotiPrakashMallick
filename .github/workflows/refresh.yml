@@ -1,0 +1,43 @@
+name: refresh profile assets
+
+on:
+  schedule:
+    - cron: "17 1 * * *" # 06:47 IST daily
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/gen.py
+      - .github/workflows/refresh.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-assets
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate SVGs from live GitHub data
+        run: python3 scripts/gen.py
+
+      # GitHub serves README images through camo, which caches aggressively.
+      # Without a changing query string the page keeps showing yesterday's
+      # numbers no matter what the committed SVG says.
+      - name: Bump the cache-buster
+        run: |
+          stamp=$(date -u +%Y%m%d%H%M)
+          sed -i -E "s#(assets/[A-Za-z0-9/_-]+\.svg)\?v=[0-9]+#\1?v=$stamp#g" README.md
+
+      - name: Commit if anything moved
+        run: |
+          git config user.name  "Jyoti Prakash Mallick"
+          git config user.email "JyotiPrakashMallick@users.noreply.github.com"
+          git add assets README.md
+          git diff --staged --quiet && echo "nothing changed" && exit 0
+          git commit -m "chore: refresh profile telemetry"
+          git push
