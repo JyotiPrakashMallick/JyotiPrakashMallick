@@ -72,9 +72,9 @@ AVAILABILITY = "HYDERABAD, INDIA · HYBRID / REMOTE"
 
 LINKS = [
     ("PORTFOLIO", "https://jyotiprakash.github.io/", True),
-    ("LINKEDIN", "https://www.linkedin.com/in/jyoti-prakash-mallick", False),
-    ("WRITING", "https://jyotiprakash.github.io/", False),
-    ("RÉSUMÉ", "https://www.linkedin.com/in/jyoti-prakash-mallick", False),
+    ("LINKEDIN", "https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/", False),
+    ("STACK OVERFLOW", "https://stackoverflow.com/users/6623265/jyoti-prakash-mallick", False),
+    ("RÉSUMÉ", "https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/", False),
 ]
 
 OSS = [
@@ -581,7 +581,7 @@ def main():
     put("lifetime.svg", lifetime(d))
 
     for label, _url, filled in LINKS:
-        norm = label.lower().replace("é", "e")
+        norm = label.lower().replace("é", "e").replace(" ", "")
         put(f"links/{norm}.svg", link_chip(label, filled))
     for org, name, what in OSS:
         put(f"oss/{org}.svg", oss_chip(org, name, what))

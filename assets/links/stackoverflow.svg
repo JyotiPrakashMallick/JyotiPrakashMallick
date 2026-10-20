@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="32" viewBox="0 0 140 32" role="img" aria-label="STACK OVERFLOW"><style>svg{--tx:#1a1a1a;--mu:#666660;--ac:#b84700;--bd:#dddddd;--sf:#faf9f2;--grid:#e8e8e0;--on:#ffffff}@media(prefers-color-scheme:dark){svg{--tx:#e6edf3;--mu:#8b949e;--ac:#b84700;--bd:#30363d;--sf:#161b22;--grid:#21262d;--on:#ffffff}}
+.d{font-family:'Unica One', Impact, 'Haettenschweiler', 'Arial Narrow', sans-serif} .b{font-family:'Supreme', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif} .m{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+.tx{fill:var(--tx)} .mu{fill:var(--mu)} .ac{fill:var(--ac)}
+.kick{font-size:10.5px;letter-spacing:2.4px;font-weight:500}
+.lab{font-size:9px;letter-spacing:1.6px}
+.card{fill:var(--sf);stroke:var(--bd);stroke-width:1}
+.in{animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+    .fillbtn{fill:var(--ac)} .ghost{fill:none;stroke:var(--bd);stroke-width:1}
+    .onac{fill:var(--on)}
+    </style><rect x="0.5" y="0.5" width="139" height="31" rx="3" class="ghost"/><text x="70" y="20" text-anchor="middle" class="m lab tx">STACK OVERFLOW</text></svg>
