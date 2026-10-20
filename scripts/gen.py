@@ -57,11 +57,12 @@ DARK = dict(
 )
 
 FONTS = {
-    "SF Pro": ("unica-one-400.woff2", 400),    # fallback woff2 (SF Pro served via system stack)
-    "Supreme": ("supreme-500.woff2", 500),
+    # SF Pro only exists on Apple devices and can't be embedded, so everyone
+    # else gets Inter - the closest open-source match - baked into the SVG.
+    "Inter": ("inter-var.woff2", "400 700"),
 }
-FD = "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif"
-FB = "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+FD = "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+FB = "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 FM = "'SF Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
 KICKER = "AI PERFORMANCE ENGINEER · CLOUD SCALABILITY · DISTRIBUTED SYSTEMS"
@@ -305,8 +306,8 @@ def header():
     font_size = 76 if name_len <= 17 else 66 if name_len <= 22 else 58
     y_name = 110
 
-    css = f"""{""}{theme_vars()}{BASE_CSS}
-    .name{{font-size:{font_size}px;letter-spacing:.5px}}
+    css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
+    .name{{font-size:{font_size}px;font-weight:600;letter-spacing:-.5px}}
     .rule{{stroke:var(--bd);stroke-width:1;transform-origin:left center;
       animation:draw .9s cubic-bezier(.2,.7,.2,1) forwards}}
     .d2{{animation-duration:.72s}} .d3{{animation-duration:.9s}} .d4{{animation-duration:1.08s}}
@@ -368,7 +369,7 @@ def stack_badge(slug, label):
 # ---------------------------------------------------------------------- ticker
 def ticker(d):
     stamp = datetime.now(timezone.utc).strftime("%d %b %Y").upper()
-    css = f"""{theme_vars()}{BASE_CSS}
+    css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
     .bar{{fill:var(--sf)}} .edge{{stroke:var(--bd);stroke-width:1}}
     .dot{{fill:var(--ac);animation:pulse 2s ease-in-out infinite}}
     .halo{{fill:var(--ac);opacity:.3;animation:halo 2s ease-in-out infinite}}
@@ -392,7 +393,7 @@ def ticker(d):
 def timeline():
     row, top, axis = 68, 60, 214
     H = top + row * len(TIMELINE) + 8
-    css = f"""{""}{theme_vars()}{BASE_CSS}
+    css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
     .role{{font-size:17px;font-weight:500}}
     .axis{{stroke:var(--bd);stroke-width:1}}
     .node{{fill:var(--sf);stroke:var(--bd);stroke-width:1.5}}
@@ -467,7 +468,7 @@ def activity(d):
                     f'{datetime.strptime(iso, "%Y-%m-%d").strftime("%b").upper()}</text>'
                 )
 
-    css = f"""{""}{theme_vars()}{BASE_CSS}
+    css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
     .grid{{stroke:var(--grid);stroke-width:1}}
     .spark{{fill:none;stroke:var(--ac);stroke-width:1.6;stroke-linejoin:round;
       stroke-dasharray:4200;animation:trace 2.4s cubic-bezier(.3,.6,.2,1) forwards}}
@@ -528,7 +529,7 @@ def stats(d):
     for x, t in legend:
         bar.append(f'<text x="{x:.1f}" y="182" class="m lab mu">{t}</text>')
 
-    css = f"""{""}{theme_vars()}{BASE_CSS}
+    css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
     @keyframes grow{{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}
     """
     body = f"""<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="6" class="card"/>
@@ -570,7 +571,7 @@ def lifetime(d):
             f'<text x="{x + bw / 2:.1f}" y="{ybase + 17}" text-anchor="middle" class="m lab mu">{y}</text>'
         )
 
-    css = f"""{""}{theme_vars()}{BASE_CSS}
+    css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
     .grid{{stroke:var(--grid);stroke-width:1}}
     @keyframes sprout{{from{{transform:scaleY(0)}}to{{transform:scaleY(1)}}}}
     """
