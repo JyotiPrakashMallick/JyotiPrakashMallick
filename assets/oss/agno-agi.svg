@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="196" height="58" viewBox="0 0 196 58" role="img" aria-label="Agno — agent framework"><style>svg{--tx:#1a1a1a;--mu:#666660;--ac:#b84700;--bd:#dddddd;--sf:#faf9f2;--grid:#e8e8e0;--on:#ffffff}@media(prefers-color-scheme:dark){svg{--tx:#e6edf3;--mu:#8b949e;--ac:#b84700;--bd:#30363d;--sf:#161b22;--grid:#21262d;--on:#ffffff}}
-.d{font-family:'Unica One', Impact, 'Haettenschweiler', 'Arial Narrow', sans-serif} .b{font-family:'Supreme', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif} .m{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="58" viewBox="0 0 196 58" role="img" aria-label="Agno — agent framework"><style>svg{--tx:#1d1d1f;--mu:#6e6e73;--ac:#0071e3;--bd:#d2d2d7;--sf:#f5f5f7;--grid:#e5e5ea;--on:#ffffff}@media(prefers-color-scheme:dark){svg{--tx:#f5f5f7;--mu:#98989d;--ac:#2997ff;--bd:#38383a;--sf:#1c1c1e;--grid:#2c2c2e;--on:#ffffff}}
+.d{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif} .b{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif} .m{font-family:'SF Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
 .tx{fill:var(--tx)} .mu{fill:var(--mu)} .ac{fill:var(--ac)}
 .kick{font-size:10.5px;letter-spacing:2.4px;font-weight:500}
 .lab{font-size:9px;letter-spacing:1.6px}

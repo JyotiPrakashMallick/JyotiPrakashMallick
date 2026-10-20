@@ -38,37 +38,37 @@ CACHE = ROOT / ".cache"
 
 # ---------------------------------------------------------------- design tokens
 LIGHT = dict(
-    tx="#1a1a1a",
-    mu="#666660",
-    ac="#b84700",  # warm terracotta/amber
-    bd="#dddddd",
-    sf="#faf9f2",
-    grid="#e8e8e0",
+    tx="#1d1d1f",   # Apple text colour
+    mu="#6e6e73",   # Apple secondary label
+    ac="#0071e3",   # Apple blue
+    bd="#d2d2d7",   # Apple separator
+    sf="#f5f5f7",   # Apple background
+    grid="#e5e5ea",
     on="#ffffff",
 )
 DARK = dict(
-    tx="#e6edf3",
-    mu="#8b949e",
-    ac="#b84700",  # consistent amber/orange in dark mode (or #70d100 if preferred)
-    bd="#30363d",
-    sf="#161b22",
-    grid="#21262d",
+    tx="#f5f5f7",   # Apple dark text
+    mu="#98989d",   # Apple dark secondary label
+    ac="#2997ff",   # Apple blue (dark)
+    bd="#38383a",   # Apple dark separator
+    sf="#1c1c1e",   # Apple dark background
+    grid="#2c2c2e",
     on="#ffffff",
 )
 
 FONTS = {
-    "Unica One": ("unica-one-400.woff2", 400),
+    "SF Pro": ("unica-one-400.woff2", 400),    # fallback woff2 (SF Pro served via system stack)
     "Supreme": ("supreme-500.woff2", 500),
 }
-FD = "'Unica One', Impact, 'Haettenschweiler', 'Arial Narrow', sans-serif"
-FB = "'Supreme', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"
-FM = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+FD = "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+FB = "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+FM = "'SF Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
-KICKER = "LEAD PERFORMANCE & SCALABILITY ENGINEER · AI SYSTEMS · CLOUD INFRA"
-TAGLINE = "Architecting scalable AI platforms, distributed systems, and resilient cloud infrastructure."
-NOW = "Auditoria.AI · Lead Performance Scalability Engineer"
-ROLES = "LEAD SCALABILITY ENGINEER · PERFORMANCE ARCHITECT · DISTRIBUTED SYSTEMS"
-AVAILABILITY = "HYDERABAD, INDIA · HYBRID / REMOTE"
+KICKER = "AI PERFORMANCE ENGINEER · CLOUD SCALABILITY · DISTRIBUTED SYSTEMS"
+TAGLINE = "Architecting high-throughput AI platforms, distributed systems, and resilient cloud infrastructure."
+NOW = "Auditoria.AI · AI Performance Engineer"
+ROLES = "AI PERFORMANCE ENGINEER · PRINCIPAL PERF ARCHITECT · CLOUD INFRA"
+AVAILABILITY = "HYDERABAD, INDIA · OPEN TO REMOTE"
 
 LINKS = [
     ("PORTFOLIO", "https://jyotiprakash.github.io/", True),
@@ -108,28 +108,52 @@ STACK = [
 
 TIMELINE = [
     (
-        "OCT 2021 — PRESENT",
+        "JUN 2025 — PRESENT",
         "Auditoria.AI",
-        "LEAD PERFORMANCE SCALABILITY ENGINEER",
-        "Enterprise AI SaaS. Architecting high-throughput load testing, distributed telemetry, and scalability.",
+        "AI PERFORMANCE ENGINEER",
+        "AI-driven enterprise SaaS. Performance engineering for AI/ML pipelines, scalability, and reliability.",
     ),
     (
-        "2020 — 2021",
-        "Cloud & Quality Engineering",
-        "SENIOR PERFORMANCE ARCHITECT",
-        "Distributed benchmarking, AWS ECS/Fargate containerization, and automated quality gates.",
+        "DEC 2025 — JUL 2026",
+        "CVS Health, via Insight Global",
+        "PERFORMANCE ENGINEER (CONSULTANT)",
+        "High-availability healthcare systems. Load strategy, distributed tracing, and SLO enforcement.",
     ),
     (
-        "2018 — 2020",
-        "Cloud Telemetry & Testing",
-        "PERFORMANCE ENGINEER",
-        "Built Keptn SLI providers, JMeter custom listeners for Azure Cosmos DB & SQL Server.",
+        "APR 2024 — JUN 2025",
+        "Invest4Edu",
+        "ENGINEERING LEAD / ARCHITECT",
+        "ETL over 10M+ records; RAG Q&A at 78% accuracy; led platform architecture and team.",
     ),
     (
-        "2014 — 2018",
-        "Systems & Automation",
-        "SOFTWARE ENGINEER",
-        "Full-stack automation, distributed load generation, and continuous integration pipelines.",
+        "FEB 2020 — APR 2024",
+        "Parexel & Calyx",
+        "PRINCIPAL PERFORMANCE ENGINEER",
+        "Clinical trial platforms. Architected load frameworks, bottleneck analysis at enterprise scale.",
+    ),
+    (
+        "SEPT 2017 — FEB 2020",
+        "SS&C EZE Software",
+        "SR. PERFORMANCE ENGINEER",
+        "Financial trading systems. Performance profiling, capacity planning, and automated benchmarking.",
+    ),
+    (
+        "OCT 2014 — SEPT 2017",
+        "NCR Corporation",
+        "SR. PERFORMANCE ENGINEER",
+        "Retail & banking platforms. JMeter harnesses, distributed load generation, real-time telemetry.",
+    ),
+    (
+        "APR 2010 — OCT 2014",
+        "Infibeam Avenues",
+        "SR. SOFTWARE ENGINEER",
+        "E-commerce platform engineering, full-stack automation, and continuous integration pipelines.",
+    ),
+    (
+        "SEPT 2009 — JAN 2010",
+        "Zensar Technologies",
+        "SOFTWARE ENGINEER INTERN",
+        "Enterprise systems integration and early-career software engineering foundations.",
     ),
 ]
 
@@ -235,11 +259,12 @@ def b64(path, mime):
 def font_face(*families):
     out = []
     for fam in families:
-        file, weight = FONTS[fam]
-        out.append(
-            f"@font-face{{font-family:'{fam}';font-style:normal;font-weight:{weight};"
-            f"src:url({b64(ASSETS / file, 'font/woff2')}) format('woff2');}}"
-        )
+        if fam in FONTS:
+            file, weight = FONTS[fam]
+            out.append(
+                f"@font-face{{font-family:'{fam}';font-style:normal;font-weight:{weight};"
+                f"src:url({b64(ASSETS / file, 'font/woff2')}) format('woff2');}}"
+            )
     return "".join(out)
 
 
@@ -280,7 +305,7 @@ def header():
     font_size = 76 if name_len <= 17 else 66 if name_len <= 22 else 58
     y_name = 110
 
-    css = f"""{font_face('Unica One')}{theme_vars()}{BASE_CSS}
+    css = f"""{""}{theme_vars()}{BASE_CSS}
     .name{{font-size:{font_size}px;letter-spacing:.5px}}
     .rule{{stroke:var(--bd);stroke-width:1;transform-origin:left center;
       animation:draw .9s cubic-bezier(.2,.7,.2,1) forwards}}
@@ -367,7 +392,7 @@ def ticker(d):
 def timeline():
     row, top, axis = 68, 60, 214
     H = top + row * len(TIMELINE) + 8
-    css = f"""{font_face('Supreme')}{theme_vars()}{BASE_CSS}
+    css = f"""{""}{theme_vars()}{BASE_CSS}
     .role{{font-size:17px;font-weight:500}}
     .axis{{stroke:var(--bd);stroke-width:1}}
     .node{{fill:var(--sf);stroke:var(--bd);stroke-width:1.5}}
@@ -442,7 +467,7 @@ def activity(d):
                     f'{datetime.strptime(iso, "%Y-%m-%d").strftime("%b").upper()}</text>'
                 )
 
-    css = f"""{font_face('Unica One')}{theme_vars()}{BASE_CSS}
+    css = f"""{""}{theme_vars()}{BASE_CSS}
     .grid{{stroke:var(--grid);stroke-width:1}}
     .spark{{fill:none;stroke:var(--ac);stroke-width:1.6;stroke-linejoin:round;
       stroke-dasharray:4200;animation:trace 2.4s cubic-bezier(.3,.6,.2,1) forwards}}
@@ -503,7 +528,7 @@ def stats(d):
     for x, t in legend:
         bar.append(f'<text x="{x:.1f}" y="182" class="m lab mu">{t}</text>')
 
-    css = f"""{font_face('Unica One')}{theme_vars()}{BASE_CSS}
+    css = f"""{""}{theme_vars()}{BASE_CSS}
     @keyframes grow{{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}
     """
     body = f"""<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="6" class="card"/>
@@ -545,7 +570,7 @@ def lifetime(d):
             f'<text x="{x + bw / 2:.1f}" y="{ybase + 17}" text-anchor="middle" class="m lab mu">{y}</text>'
         )
 
-    css = f"""{font_face('Unica One')}{theme_vars()}{BASE_CSS}
+    css = f"""{""}{theme_vars()}{BASE_CSS}
     .grid{{stroke:var(--grid);stroke-width:1}}
     @keyframes sprout{{from{{transform:scaleY(0)}}to{{transform:scaleY(1)}}}}
     """
