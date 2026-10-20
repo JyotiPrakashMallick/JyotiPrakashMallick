@@ -6,6 +6,8 @@ Self-contained design system:
   links/*.svg       clickable chips (portfolio, linkedin, writing, resume)
   ticker.svg        live layer - last shipped, current focus, refreshed at
   timeline.svg      career timeline rendered as an interactive SVG
+  loadtest.svg      illustration - throughput ramp with p99 under the SLA
+  flamegraph.svg    illustration - CPU flame graph with the hot path lit
   oss/*.svg         one chip per upstream project, real logo embedded
   activity.svg      daily contribution graph over 12 months
   stats.svg         last-52-weeks totals and language mix
@@ -21,6 +23,7 @@ Usage:  python scripts/gen.py
 
 import base64
 import json
+import math
 import pathlib
 import re
 import urllib.request
@@ -418,6 +421,93 @@ def timeline():
     return svg(900, H, css, body, "work timeline")
 
 
+# --------------------------------------------------------------- illustrations
+def load_test():
+    """Throughput ramps up while p99 latency holds under the SLA line."""
+    x0, x1, y0, y1, sla = 16, 224, 46, 150, 76
+    n = 26
+    xs = [x0 + (x1 - x0) * i / (n - 1) for i in range(n)]
+    # deterministic jitter so the drawing doesn't churn the diff every night
+    jit = [3.2 * math.sin(i * 1.7) + 2.1 * math.sin(i * .55) for i in range(n)]
+    rps = [y1 - (y1 - y0 - 10) * min(1, i / (n * .7)) for i in range(n)]
+    p99 = [128 - 10 * min(1, i / (n * .7)) + jit[i] for i in range(n)]
+    area = f"M{x0},{y1} " + " ".join(f"L{x:.1f},{y:.1f}" for x, y in zip(xs, rps)) + f" L{x1},{y1} Z"
+    line = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in zip(xs, p99))
+    css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
+    .grid{{stroke:var(--grid);stroke-width:1}}
+    .sla{{stroke:var(--mu);stroke-width:1;stroke-dasharray:3 3}}
+    .rps{{fill:var(--ac);opacity:.14}}
+    .p99{{fill:none;stroke:var(--ac);stroke-width:2;stroke-linejoin:round}}
+    .wipe{{transform-box:fill-box;transform-origin:left;animation:wipe 6s cubic-bezier(.4,0,.2,1) infinite}}
+    .dot{{fill:var(--ac);animation:pulse 1.2s ease-in-out infinite}}
+    @keyframes wipe{{0%{{transform:scaleX(0)}}70%,92%{{transform:scaleX(1)}}100%{{transform:scaleX(1);opacity:0}}}}
+    @keyframes pulse{{50%{{opacity:.25}}}}
+    """
+    grid = "".join(
+        f'<line x1="{x0}" y1="{y:.0f}" x2="{x1}" y2="{y:.0f}" class="grid"/>'
+        for y in (y0, (y0 + y1) / 2, y1)
+    )
+    body = f"""<rect x=".5" y=".5" width="239" height="179" rx="10" class="card"/>
+<text x="16" y="26" class="m lab mu">LOAD TEST · RAMP</text>
+<text x="224" y="26" text-anchor="end" class="b ac" font-size="11" font-weight="600">p99 42 ms</text>
+<defs><clipPath id="c"><rect x="{x0}" y="0" width="{x1 - x0 + 4}" height="180" class="wipe"/></clipPath></defs>
+{grid}
+<line x1="{x0}" y1="{sla}" x2="{x1}" y2="{sla}" class="sla"/>
+<text x="{x0}" y="{sla - 5}" class="m mu" font-size="8">SLA 100 ms</text>
+<g clip-path="url(#c)"><path d="{area}" class="rps"/><path d="{line}" class="p99"/>
+<circle cx="{xs[-1]:.1f}" cy="{p99[-1]:.1f}" r="3" class="dot"/></g>
+<text x="{x0}" y="166" class="m mu" font-size="8">0 rps</text>
+<text x="{x1}" y="166" text-anchor="end" class="m mu" font-size="8">10k rps</text>"""
+    return svg(240, 180, css, body, "Load test: throughput ramps while p99 latency stays under SLA")
+
+
+FLAME = [  # (row, start, width, frame, on the hot path)
+    (0, 0, 208, "main", False),
+    (1, 0, 132, "handle_request", True),
+    (1, 134, 74, "gc", False),
+    (2, 0, 92, "serialize", True),
+    (2, 94, 38, "db.query", False),
+    (2, 134, 50, "mark", False),
+    (3, 0, 70, "json.dumps", True),
+    (3, 94, 30, "pool", False),
+    (3, 134, 28, "sweep", False),
+    (4, 0, 52, "encode", True),
+    (4, 54, 14, "", False),
+    (5, 0, 30, "utf8", True),
+]
+
+
+def flame_graph():
+    """CPU profile that stacks up frame by frame, hot path in the accent colour."""
+    x0, base, h = 16, 158, 18
+    css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
+    .fr{{fill:var(--grid);stroke:var(--sf);stroke-width:1}}
+    .hot{{fill:var(--ac)}}
+    .lbl{{font-size:8.5px;fill:var(--tx)}} .lbl.on{{fill:var(--on)}}
+    .st{{opacity:0;animation:stack 6s ease-out infinite}}
+    .glow{{animation:pulse 1.4s ease-in-out infinite}}
+    @keyframes stack{{0%{{opacity:0;transform:translateY(6px)}}8%,88%{{opacity:1;transform:none}}100%{{opacity:0}}}}
+    @keyframes pulse{{50%{{opacity:.7}}}}
+    @media(prefers-reduced-motion:reduce){{.st{{opacity:1}}}}
+    """
+    frames = []
+    for row, start, w, name, hot in FLAME:
+        y = base - (row + 1) * h
+        label = name if len(name) * 5.2 < w - 6 else ""
+        frames.append(
+            f'<g class="st" style="animation-delay:{row * .35:.2f}s">'
+            f'<rect x="{x0 + start}" y="{y}" width="{w}" height="{h - 1}" rx="2" class="fr{" hot glow" if hot else ""}"/>'
+            + (f'<text x="{x0 + start + 5}" y="{y + 12}" class="m lbl{" on" if hot else ""}">{esc(label)}</text>' if label else "")
+            + "</g>"
+        )
+    body = f"""<rect x=".5" y=".5" width="239" height="179" rx="10" class="card"/>
+<text x="16" y="26" class="m lab mu">CPU PROFILE</text>
+<text x="224" y="26" text-anchor="end" class="b ac" font-size="11" font-weight="600">hot path 38%</text>
+{"".join(frames)}
+<text x="16" y="172" class="m mu" font-size="8">flame graph · sampled 99 Hz</text>"""
+    return svg(240, 180, css, body, "CPU flame graph with the hot path highlighted")
+
+
 # ------------------------------------------------------------------- oss chips
 def oss_chip(org, name, what):
     W, H = 196, 58
@@ -602,6 +692,8 @@ def main():
     put("header.svg", header())
     put("ticker.svg", ticker(d))
     put("timeline.svg", timeline())
+    put("loadtest.svg", load_test())
+    put("flamegraph.svg", flame_graph())
     put("activity.svg", activity(d))
     put("stats.svg", stats(d))
     put("lifetime.svg", lifetime(d))

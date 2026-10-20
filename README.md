@@ -13,7 +13,7 @@ reliability, high throughput, and fault tolerance are non-negotiable. That shift
 engineers who obsess over performance engineering, distributed orchestration, bottlenecks,
 and observability as much as model capability. That's the work I do.
 
-<img align="right" src="assets/reading.gif" width="200" alt="" />
+<img align="right" src="assets/loadtest.svg?v=202610201509" width="240" alt="Load test — throughput ramps while p99 latency holds under the SLA" />
 
 ### What that looks like in numbers
 
@@ -79,7 +79,7 @@ modes found while building on these.
 </p>
 <br clear="all" />
 
-<img align="left" src="assets/hakase.gif" width="200" alt="" />
+<img align="left" src="assets/flamegraph.svg?v=202610201509" width="240" alt="CPU flame graph with the hot path highlighted" />
 
 Most of what I build starts as an architectural question under load — so I benchmark it,
 stress it, and engineer what survives. Everything above refreshes itself nightly from
