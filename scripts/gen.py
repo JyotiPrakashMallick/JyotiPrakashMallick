@@ -83,11 +83,6 @@ LINKS = [
 
 OSS = [
     ("langchain-ai", "LangGraph", "agent orchestration"),
-    ("crewAIInc", "CrewAI", "multi-agent platform"),
-    ("ollama", "Ollama", "local LLM runtime"),
-    ("langflow-ai", "Langflow", "visual agent builder"),
-    ("agno-agi", "Agno", "agent framework"),
-    ("h2oai", "h2oGPT", "LLM deployment"),
     ("browser-use", "Browser Use", "browser automation"),
 ]
 

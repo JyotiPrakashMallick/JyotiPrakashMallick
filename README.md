@@ -41,11 +41,6 @@ modes found while building on these.
 
 <p>
 <a href="https://github.com/langchain-ai/langgraph"><img src="assets/oss/langchain-ai.svg?v=202610201517" height="58" alt="LangGraph" /></a>
-<a href="https://github.com/crewAIInc/crewAI"><img src="assets/oss/crewAIInc.svg?v=202610201517" height="58" alt="CrewAI" /></a>
-<a href="https://github.com/ollama/ollama"><img src="assets/oss/ollama.svg?v=202610201517" height="58" alt="Ollama" /></a>
-<a href="https://github.com/langflow-ai/langflow"><img src="assets/oss/langflow-ai.svg?v=202610201517" height="58" alt="Langflow" /></a>
-<a href="https://github.com/agno-agi/agno"><img src="assets/oss/agno-agi.svg?v=202610201517" height="58" alt="Agno" /></a>
-<a href="https://github.com/h2oai/h2ogpt"><img src="assets/oss/h2oai.svg?v=202610201517" height="58" alt="h2oGPT" /></a>
 <a href="https://github.com/browser-use/browser-use"><img src="assets/oss/browser-use.svg?v=202610201517" height="58" alt="Browser Use" /></a>
 </p>
 
