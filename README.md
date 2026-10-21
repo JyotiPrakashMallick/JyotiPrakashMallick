@@ -2,9 +2,9 @@
 
 <p>
 <a href="https://jyotiprakash.github.io/"><img src="assets/links/portfolio.svg?v=202610201517" height="32" alt="Portfolio" /></a>
-<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/"><img src="assets/links/linkedin.svg?v=202610201517" height="32" alt="LinkedIn" /></a>
-<a href="https://stackoverflow.com/users/6623265/jyoti-prakash-mallick"><img src="assets/links/stackoverflow.svg?v=202610201517" height="32" alt="Stack Overflow" /></a>
-<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/"><img src="assets/links/resume.svg?v=202610201517" height="32" alt="Résumé" /></a>
+<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/linkedin.svg?v=202610201517" height="32" alt="LinkedIn" /></a>
+<a href="https://stackoverflow.com/users/6623265/jyoti-prakash-mallick" target="_blank" rel="noopener noreferrer"><img src="assets/links/stackoverflow.svg?v=202610201517" height="32" alt="Stack Overflow" /></a>
+<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/resume.svg?v=202610201517" height="32" alt="Résumé" /></a>
 </p>
 <img src="assets/ticker.svg?v=202610201517" alt="Last shipped, current focus, last refreshed" width="100%" />
 
