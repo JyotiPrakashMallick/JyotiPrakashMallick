@@ -1,19 +1,19 @@
-<img src="assets/header.svg?v=202610210605" alt="JYOTI PRAKASH MALLICK — AI Performance Engineer" width="100%" />
+<img src="assets/header.svg?v=202610211312" alt="JYOTI PRAKASH MALLICK — AI Performance Engineer" width="100%" />
 
 <p>
-<a href="https://jyotiprakash.github.io/"><img src="assets/links/portfolio.svg?v=202610201517" height="32" alt="Portfolio" /></a>
-<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/linkedin.svg?v=202610201517" height="32" alt="LinkedIn" /></a>
-<a href="https://stackoverflow.com/users/6623265/jyoti-prakash-mallick" target="_blank" rel="noopener noreferrer"><img src="assets/links/stackoverflow.svg?v=202610201517" height="32" alt="Stack Overflow" /></a>
-<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/resume.svg?v=202610201517" height="32" alt="Résumé" /></a>
+<a href="https://jyotiprakash.github.io/"><img src="assets/links/portfolio.svg?v=202610211312" height="32" alt="Portfolio" /></a>
+<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/linkedin.svg?v=202610211312" height="32" alt="LinkedIn" /></a>
+<a href="https://stackoverflow.com/users/6623265/jyoti-prakash-mallick" target="_blank" rel="noopener noreferrer"><img src="assets/links/stackoverflow.svg?v=202610211312" height="32" alt="Stack Overflow" /></a>
+<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/resume.svg?v=202610211312" height="32" alt="Résumé" /></a>
 </p>
-<img src="assets/ticker.svg?v=202610210605" alt="Last shipped, current focus, last refreshed" width="100%" />
+<img src="assets/ticker.svg?v=202610211312" alt="Last shipped, current focus, last refreshed" width="100%" />
 
 Systems are transitioning from single-threaded demos to enterprise-scale AI platforms where
 reliability, high throughput, and fault tolerance are non-negotiable. That shift requires
 engineers who obsess over performance engineering, distributed orchestration, bottlenecks,
 and observability as much as model capability. That's the work I do.
 
-<img align="right" src="assets/loadtest.svg?v=202610210605" width="240" alt="Load test — throughput ramps while p99 latency holds under the SLA" />
+<img align="right" src="assets/loadtest.svg?v=202610211312" width="240" alt="Load test — throughput ramps while p99 latency holds under the SLA" />
 
 ### What that looks like in numbers
 
@@ -23,7 +23,7 @@ and observability as much as model capability. That's the work I do.
 
 <br clear="right" />
 
-<img src="assets/timeline.svg?v=202610210605" alt="Work timeline — Auditoria.AI, CVS Health, Invest4Edu, Parexel, SS&C, NCR, Infibeam, Zensar" width="100%" />
+<img src="assets/timeline.svg?v=202610211312" alt="Work timeline — Auditoria.AI, CVS Health, Invest4Edu, Parexel, SS&C, NCR, Infibeam, Zensar" width="100%" />
 
 ### Building
 
@@ -40,41 +40,41 @@ Issues and pull requests filed upstream — mostly orchestration edge cases and 
 modes found while building on these.
 
 <p>
-<a href="https://github.com/langchain-ai/langgraph"><img src="assets/oss/langchain-ai.svg?v=202610201517" height="58" alt="LangGraph" /></a>
-<a href="https://github.com/browser-use/browser-use"><img src="assets/oss/browser-use.svg?v=202610201517" height="58" alt="Browser Use" /></a>
+<a href="https://github.com/langchain-ai/langgraph"><img src="assets/oss/langchain-ai.svg?v=202610211312" height="58" alt="LangGraph" /></a>
+<a href="https://github.com/browser-use/browser-use"><img src="assets/oss/browser-use.svg?v=202610211312" height="58" alt="Browser Use" /></a>
 </p>
 
 ### Activity
 
-<img src="assets/activity.svg?v=202610210605" alt="Daily contribution activity over the last 12 months" width="100%" />
+<img src="assets/activity.svg?v=202610211312" alt="Daily contribution activity over the last 12 months" width="100%" />
 
-<img src="assets/stats.svg?v=202610210605" alt="Last 52 weeks — contributions, busiest week, repos, stars, upstream projects" width="100%" />
+<img src="assets/stats.svg?v=202610211312" alt="Last 52 weeks — contributions, busiest week, repos, stars, upstream projects" width="100%" />
 
-<img src="assets/lifetime.svg?v=202610210605" alt="All time — contributions, commits, pull requests, longest streak, per-year breakdown" width="100%" />
+<img src="assets/lifetime.svg?v=202610211312" alt="All time — contributions, commits, pull requests, longest streak, per-year breakdown" width="100%" />
 
 ### Stack
 
 <p>
-<img src="assets/stack/python.svg?v=202610210605" height="28" alt="Python" />
-<img src="assets/stack/docker.svg?v=202610210605" height="28" alt="Docker" />
-<img src="assets/stack/fastapi.svg?v=202610210605" height="28" alt="FastAPI" />
-<img src="assets/stack/pytorch.svg?v=202610210605" height="28" alt="PyTorch" />
-<img src="assets/stack/huggingface.svg?v=202610210605" height="28" alt="Transformers" />
-<img src="assets/stack/langchain.svg?v=202610210605" height="28" alt="LangChain" />
-<img src="assets/stack/langgraph.svg?v=202610210605" height="28" alt="LangGraph" />
-<img src="assets/stack/anthropic.svg?v=202610210605" height="28" alt="Claude" />
-<img src="assets/stack/openai.svg?v=202610210605" height="28" alt="OpenAI" />
-<img src="assets/stack/qdrant.svg?v=202610210605" height="28" alt="Qdrant" />
-<img src="assets/stack/mongodb.svg?v=202610210605" height="28" alt="MongoDB" />
-<img src="assets/stack/mlflow.svg?v=202610210605" height="28" alt="MLflow" />
-<img src="assets/stack/ollama.svg?v=202610210605" height="28" alt="Ollama" />
-<img src="assets/stack/aws.svg?v=202610210605" height="28" alt="AWS" />
-<img src="assets/stack/azure.svg?v=202610210605" height="28" alt="Azure" />
-<img src="assets/stack/githubactions.svg?v=202610210605" height="28" alt="GitHub Actions" />
+<img src="assets/stack/python.svg?v=202610211312" height="28" alt="Python" />
+<img src="assets/stack/docker.svg?v=202610211312" height="28" alt="Docker" />
+<img src="assets/stack/fastapi.svg?v=202610211312" height="28" alt="FastAPI" />
+<img src="assets/stack/pytorch.svg?v=202610211312" height="28" alt="PyTorch" />
+<img src="assets/stack/huggingface.svg?v=202610211312" height="28" alt="Transformers" />
+<img src="assets/stack/langchain.svg?v=202610211312" height="28" alt="LangChain" />
+<img src="assets/stack/langgraph.svg?v=202610211312" height="28" alt="LangGraph" />
+<img src="assets/stack/anthropic.svg?v=202610211312" height="28" alt="Claude" />
+<img src="assets/stack/openai.svg?v=202610211312" height="28" alt="OpenAI" />
+<img src="assets/stack/qdrant.svg?v=202610211312" height="28" alt="Qdrant" />
+<img src="assets/stack/mongodb.svg?v=202610211312" height="28" alt="MongoDB" />
+<img src="assets/stack/mlflow.svg?v=202610211312" height="28" alt="MLflow" />
+<img src="assets/stack/ollama.svg?v=202610211312" height="28" alt="Ollama" />
+<img src="assets/stack/aws.svg?v=202610211312" height="28" alt="AWS" />
+<img src="assets/stack/azure.svg?v=202610211312" height="28" alt="Azure" />
+<img src="assets/stack/githubactions.svg?v=202610211312" height="28" alt="GitHub Actions" />
 </p>
 <br clear="all" />
 
-<img align="left" src="assets/flamegraph.svg?v=202610210605" width="240" alt="CPU flame graph with the hot path highlighted" />
+<img align="left" src="assets/flamegraph.svg?v=202610211312" width="240" alt="CPU flame graph with the hot path highlighted" />
 
 Most of what I build starts as an architectural question under load — so I benchmark it,
 stress it, and engineer what survives. Everything above refreshes itself nightly from
