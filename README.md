@@ -29,10 +29,11 @@ and observability as much as model capability. That's the work I do.
 
 | Project | | |
 |---|---|---|
+| **[PerfOS](https://github.com/JyotiPrakashMallick/PerfOS)** | `EXPLORING` | Performance engineering workbench to design and run k6, Gatling & JMeter tests, spin up mock APIs, forecast capacity, and get AI analysis of results. |
+| **[PerfOSDatagen](https://github.com/JyotiPrakashMallick/PerfOSDatagen)** | `EXPLORING` | Agentic AI engine that reproduces slow multi-tenant MySQL queries on schema-only synthetic data and tunes them until Avg & P95 latency improve 20%+. |
 | **[Jmeter-Listener-CosmosDB](https://github.com/JyotiPrakashMallick/Jmeter-Listener-CosmosDB)** | `SHIPPING` | Abstract listener for Apache JMeter to stream real-time test execution metrics directly to Azure Cosmos DB. |
 | **[selenium-grid-ecs](https://github.com/JyotiPrakashMallick/selenium-grid-ecs)** | `SHIPPING` | Highly scalable Selenium Grid deployment on AWS ECS using Fargate Spot Containers for distributed testing. |
 | **[pac-sliprovider](https://github.com/JyotiPrakashMallick/pac-sliprovider)** | `SHIPPING` | Keptn SLI Provider built for automated performance evaluation and continuous deployment quality gates. |
-| **[datagen](https://github.com/JyotiPrakashMallick/datagen)** | `EXPLORING` | High-throughput synthetic data generator designed to create coherent test data at scale for enterprise benchmarks. |
 
 ### Open source contribution
 
