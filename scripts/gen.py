@@ -84,6 +84,11 @@ LINKS = [
 OSS = [
     ("langchain-ai", "LangGraph", "agent orchestration"),
     ("browser-use", "Browser Use", "browser automation"),
+    ("langfuse", "Langfuse", "llm observability"),
+    ("groq", "Groq", "llm inference"),
+    ("neondatabase", "Neon Postgres", "serverless postgres"),
+    ("rudderlabs", "RudderStack", "customer data pipelines"),
+    ("googleapis", "Google BigQuery", "data warehouse"),
 ]
 
 STACK = [
