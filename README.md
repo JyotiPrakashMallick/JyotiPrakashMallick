@@ -41,7 +41,6 @@ Issues and pull requests filed upstream — mostly orchestration edge cases and 
 modes found while building on these.
 
 <p>
-<<<<<<< HEAD
 <a href="https://github.com/langchain-ai/langgraph"><img src="assets/oss/langchain-ai.svg?v=202610281639" height="58" alt="LangGraph" /></a>
 <a href="https://github.com/browser-use/browser-use"><img src="assets/oss/browser-use.svg?v=202610281639" height="58" alt="Browser Use" /></a>
 <a href="https://github.com/langfuse/langfuse"><img src="assets/oss/langfuse.svg?v=202610281639" height="58" alt="Langfuse" /></a>
@@ -49,10 +48,6 @@ modes found while building on these.
 <a href="https://github.com/neondatabase/neon"><img src="assets/oss/neondatabase.svg?v=202610281639" height="58" alt="Neon Postgres" /></a>
 <a href="https://github.com/rudderlabs/rudder-server"><img src="assets/oss/rudderlabs.svg?v=202610281639" height="58" alt="RudderStack" /></a>
 <a href="https://github.com/googleapis/python-bigquery"><img src="assets/oss/googleapis.svg?v=202610281639" height="58" alt="Google BigQuery" /></a>
-=======
-<a href="https://github.com/langchain-ai/langgraph"><img src="assets/oss/langchain-ai.svg?v=202610281639" height="58" alt="LangGraph" /></a>
-<a href="https://github.com/browser-use/browser-use"><img src="assets/oss/browser-use.svg?v=202610281639" height="58" alt="Browser Use" /></a>
->>>>>>> 8226f2376aa35bfa39199bb8ae60d30eabc60d3a
 </p>
 
 ### Activity
