@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="98" height="28" viewBox="0 0 98 28" role="img" aria-label="FastAPI"><style>svg{--tx:#1d1d1f;--mu:#6e6e73;--ac:#0071e3;--bd:#d2d2d7;--sf:#f5f5f7;--grid:#e5e5ea;--on:#ffffff}@media(prefers-color-scheme:dark){svg{--tx:#f5f5f7;--mu:#98989d;--ac:#2997ff;--bd:#38383a;--sf:#1c1c1e;--grid:#2c2c2e;--on:#ffffff}}
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="64" viewBox="0 0 80 64" role="img" aria-label="FastAPI"><style>svg{--tx:#1d1d1f;--mu:#6e6e73;--ac:#0071e3;--bd:#d2d2d7;--sf:#f5f5f7;--grid:#e5e5ea;--on:#ffffff}@media(prefers-color-scheme:dark){svg{--tx:#f5f5f7;--mu:#98989d;--ac:#2997ff;--bd:#38383a;--sf:#1c1c1e;--grid:#2c2c2e;--on:#ffffff}}
 .d{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif} .b{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif} .m{font-family:'SF Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
 .tx{fill:var(--tx)} .mu{fill:var(--mu)} .ac{fill:var(--ac)}
 .kick{font-size:10.5px;letter-spacing:2.4px;font-weight:500}
@@ -7,7 +7,7 @@
 .in{animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
 @keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
-
-    .chip{fill:var(--sf);stroke:var(--bd);stroke-width:1}
-    .glyph{fill:var(--ac)}
-    </style><rect x="0.5" y="0.5" width="97" height="27" rx="4" class="chip"/><g transform="translate(13,7) scale(0.58)"><path d="M12 .0387C5.3729.0384.0003 5.3931 0 11.9988c-.001 6.6066 5.372 11.9628 12 11.9625 6.628.0003 12.001-5.3559 12-11.9625-.0003-6.6057-5.3729-11.9604-12-11.96m-.829 5.4153h7.55l-7.5805 5.3284h5.1828L5.279 18.5436q2.9466-6.5444 5.892-13.0896" class="glyph"/></g><text x="37" y="18.5" class="b tx" font-size="11.5">FastAPI</text></svg>
+</style><rect x="0.5" y="0.5" width="79" height="63" rx="6" class="card"/>
+<rect x="24.0" y="9" width="32" height="32" rx="7" fill="#ffffff"/>
+<svg x="29.0" y="14" width="22" height="22" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet"><path fill="#009688" d="M128 0C57.33 0 0 57.33 0 128s57.33 128 128 128s128-57.33 128-128S198.67 0 128 0m-6.67 230.605v-80.288H76.699l64.128-124.922v80.288h42.966z"/></svg>
+<text x="40.0" y="54" text-anchor="middle" class="b tx" font-size="10.5">FastAPI</text></svg>

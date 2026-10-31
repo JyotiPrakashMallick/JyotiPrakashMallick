@@ -12,7 +12,7 @@ Self-contained design system:
   activity.svg      daily contribution graph over 12 months
   stats.svg         last-52-weeks totals and language mix
   lifetime.svg      all-time totals since 2014, with a per-year breakdown
-  stack/*.svg       tech badges, glyphs from simple-icons
+  stack/*.svg       tech tiles, color logos from iconify (simple-icons fallback)
 
 Everything is self-contained: fonts and logos are base64-embedded, colours flip
 with prefers-color-scheme, no external requests at render time. GitHub camo proxy
@@ -87,26 +87,36 @@ OSS = [
     ("langfuse", "Langfuse", "llm observability"),
     ("groq", "Groq", "llm inference"),
     ("neondatabase", "Neon Postgres", "serverless postgres"),
-    ("rudderlabs", "RudderStack", "customer data pipelines"),
+    ("rudderlabs", "RudderStack", "data pipelines"),
     ("googleapis", "Google BigQuery", "data warehouse"),
 ]
 
 STACK = [
     ("python", "Python"),
-    ("docker", "Docker"),
+    ("java", "Java"),
+    ("javascript", "JavaScript"),
+    ("spring", "Spring"),
     ("fastapi", "FastAPI"),
     ("pytorch", "PyTorch"),
     ("huggingface", "Transformers"),
     ("langchain", "LangChain"),
     ("langgraph", "LangGraph"),
     ("anthropic", "Claude"),
-    (None, "OpenAI"),
-    ("qdrant", "Qdrant"),
-    ("mongodb", "MongoDB"),
-    ("mlflow", "MLflow"),
+    ("openai", "OpenAI"),
     ("ollama", "Ollama"),
-    (None, "AWS"),
-    (None, "Azure"),
+    ("qdrant", "Qdrant"),
+    ("mlflow", "MLflow"),
+    ("mongodb", "MongoDB"),
+    ("mysql", "MySQL"),
+    ("kafka", "Kafka"),
+    ("docker", "Docker"),
+    ("kubernetes", "Kubernetes"),
+    ("nginx", "Nginx"),
+    ("linux", "Linux"),
+    ("git", "Git"),
+    ("prometheus", "Prometheus"),
+    ("aws", "AWS"),
+    ("azure", "Azure"),
     ("githubactions", "Actions"),
 ]
 
@@ -347,26 +357,27 @@ def link_chip(label, filled):
 
 # --------------------------------------------------------------- stack badges
 def stack_badge(slug, label):
-    icon_w = 24 if slug else 0
-    w = int(len(label) * 6.9 + icon_w + 26)
-    css = f"""{theme_vars()}{BASE_CSS}
-    .chip{{fill:var(--sf);stroke:var(--bd);stroke-width:1}}
-    .glyph{{fill:var(--ac)}}
-    """
+    W, H = 80, 64
+    css = f"""{theme_vars()}{BASE_CSS}"""
     mark = ""
-    if slug:
-        icon_path = ASSETS / "icons" / f"{slug}.svg"
-        if icon_path.exists():
-            raw = icon_path.read_text(encoding="utf-8")
-            m = re.search(r'<path d="([^"]+)"', raw)
-            if m:
-                d = m.group(1)
-                mark = f'<g transform="translate(13,7) scale(0.58)"><path d="{d}" class="glyph"/></g>'
-    body = (
-        f'<rect x="0.5" y="0.5" width="{w - 1}" height="27" rx="4" class="chip"/>'
-        f'{mark}<text x="{13 + icon_w}" y="18.5" class="b tx" font-size="11.5">{esc(label)}</text>'
-    )
-    return svg(w, 28, css, body, label)
+    icon_path = ASSETS / "icons" / f"{slug}.svg"
+    if icon_path.exists():
+        raw = icon_path.read_text(encoding="utf-8")
+        root = re.search(r"<svg([^>]*)>", raw)
+        vb = re.search(r'viewBox="([^"]+)"', root.group(1)).group(1)
+        fill = re.search(r'\sfill="([^"]+)"', root.group(1))
+        inner = re.sub(r"<title>.*?</title>", "", raw[root.end():raw.rindex("</svg>")])
+        if fill:
+            inner = f'<g fill="{fill.group(1)}">{inner}</g>'
+        mark = (
+            f'<svg x="{W / 2 - 11}" y="14" width="22" height="22" viewBox="{vb}" '
+            f'preserveAspectRatio="xMidYMid meet">{inner}</svg>'
+        )
+    body = f"""<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="6" class="card"/>
+<rect x="{W / 2 - 16}" y="9" width="32" height="32" rx="7" fill="#ffffff"/>
+{mark}
+<text x="{W / 2}" y="54" text-anchor="middle" class="b tx" font-size="10.5">{esc(label)}</text>"""
+    return svg(W, H, css, body, label)
 
 
 # ---------------------------------------------------------------------- ticker
@@ -704,7 +715,7 @@ def main():
     for org, name, what in OSS:
         put(f"oss/{org}.svg", oss_chip(org, name, what))
     for slug, label in STACK:
-        put(f"stack/{(slug or label).lower()}.svg", stack_badge(slug, label))
+        put(f"stack/{slug}.svg", stack_badge(slug, label))
 
     print("\nGenerated assets:")
     for name, size in written:

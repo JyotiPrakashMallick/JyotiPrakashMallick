@@ -61,22 +61,32 @@ modes found while building on these.
 ### Stack
 
 <p>
-<img src="assets/stack/python.svg?v=202610281639" height="28" alt="Python" />
-<img src="assets/stack/docker.svg?v=202610281639" height="28" alt="Docker" />
-<img src="assets/stack/fastapi.svg?v=202610281639" height="28" alt="FastAPI" />
-<img src="assets/stack/pytorch.svg?v=202610281639" height="28" alt="PyTorch" />
-<img src="assets/stack/huggingface.svg?v=202610281639" height="28" alt="Transformers" />
-<img src="assets/stack/langchain.svg?v=202610281639" height="28" alt="LangChain" />
-<img src="assets/stack/langgraph.svg?v=202610281639" height="28" alt="LangGraph" />
-<img src="assets/stack/anthropic.svg?v=202610281639" height="28" alt="Claude" />
-<img src="assets/stack/openai.svg?v=202610281639" height="28" alt="OpenAI" />
-<img src="assets/stack/qdrant.svg?v=202610281639" height="28" alt="Qdrant" />
-<img src="assets/stack/mongodb.svg?v=202610281639" height="28" alt="MongoDB" />
-<img src="assets/stack/mlflow.svg?v=202610281639" height="28" alt="MLflow" />
-<img src="assets/stack/ollama.svg?v=202610281639" height="28" alt="Ollama" />
-<img src="assets/stack/aws.svg?v=202610281639" height="28" alt="AWS" />
-<img src="assets/stack/azure.svg?v=202610281639" height="28" alt="Azure" />
-<img src="assets/stack/githubactions.svg?v=202610281639" height="28" alt="GitHub Actions" />
+<img src="assets/stack/python.svg?v=202610281639" height="64" alt="Python" />
+<img src="assets/stack/java.svg?v=202610281639" height="64" alt="Java" />
+<img src="assets/stack/javascript.svg?v=202610281639" height="64" alt="JavaScript" />
+<img src="assets/stack/spring.svg?v=202610281639" height="64" alt="Spring" />
+<img src="assets/stack/fastapi.svg?v=202610281639" height="64" alt="FastAPI" />
+<img src="assets/stack/pytorch.svg?v=202610281639" height="64" alt="PyTorch" />
+<img src="assets/stack/huggingface.svg?v=202610281639" height="64" alt="Transformers" />
+<img src="assets/stack/langchain.svg?v=202610281639" height="64" alt="LangChain" />
+<img src="assets/stack/langgraph.svg?v=202610281639" height="64" alt="LangGraph" />
+<img src="assets/stack/anthropic.svg?v=202610281639" height="64" alt="Claude" />
+<img src="assets/stack/openai.svg?v=202610281639" height="64" alt="OpenAI" />
+<img src="assets/stack/ollama.svg?v=202610281639" height="64" alt="Ollama" />
+<img src="assets/stack/qdrant.svg?v=202610281639" height="64" alt="Qdrant" />
+<img src="assets/stack/mlflow.svg?v=202610281639" height="64" alt="MLflow" />
+<img src="assets/stack/mongodb.svg?v=202610281639" height="64" alt="MongoDB" />
+<img src="assets/stack/mysql.svg?v=202610281639" height="64" alt="MySQL" />
+<img src="assets/stack/kafka.svg?v=202610281639" height="64" alt="Kafka" />
+<img src="assets/stack/docker.svg?v=202610281639" height="64" alt="Docker" />
+<img src="assets/stack/kubernetes.svg?v=202610281639" height="64" alt="Kubernetes" />
+<img src="assets/stack/nginx.svg?v=202610281639" height="64" alt="Nginx" />
+<img src="assets/stack/linux.svg?v=202610281639" height="64" alt="Linux" />
+<img src="assets/stack/git.svg?v=202610281639" height="64" alt="Git" />
+<img src="assets/stack/prometheus.svg?v=202610281639" height="64" alt="Prometheus" />
+<img src="assets/stack/aws.svg?v=202610281639" height="64" alt="AWS" />
+<img src="assets/stack/azure.svg?v=202610281639" height="64" alt="Azure" />
+<img src="assets/stack/githubactions.svg?v=202610281639" height="64" alt="GitHub Actions" />
 </p>
 <br clear="all" />
 
