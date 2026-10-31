@@ -1,19 +1,19 @@
-<img src="assets/header.svg?v=202610281639" alt="JYOTI PRAKASH MALLICK — AI Performance Engineer" width="100%" />
+<img src="assets/header.svg?v=202610300712" alt="JYOTI PRAKASH MALLICK — AI Performance Engineer" width="100%" />
 
 <p>
-<a href="https://jyotiprakash.github.io/"><img src="assets/links/portfolio.svg?v=202610281639" height="32" alt="Portfolio" /></a>
-<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/linkedin.svg?v=202610281639" height="32" alt="LinkedIn" /></a>
-<a href="https://stackoverflow.com/users/6623265/jyoti-prakash-mallick" target="_blank" rel="noopener noreferrer"><img src="assets/links/stackoverflow.svg?v=202610281639" height="32" alt="Stack Overflow" /></a>
-<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/resume.svg?v=202610281639" height="32" alt="Résumé" /></a>
+<a href="https://jyotiprakash.github.io/"><img src="assets/links/portfolio.svg?v=202610300712" height="32" alt="Portfolio" /></a>
+<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/linkedin.svg?v=202610300712" height="32" alt="LinkedIn" /></a>
+<a href="https://stackoverflow.com/users/6623265/jyoti-prakash-mallick" target="_blank" rel="noopener noreferrer"><img src="assets/links/stackoverflow.svg?v=202610300712" height="32" alt="Stack Overflow" /></a>
+<a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank" rel="noopener noreferrer"><img src="assets/links/resume.svg?v=202610300712" height="32" alt="Résumé" /></a>
 </p>
-<img src="assets/ticker.svg?v=202610281639" alt="Last shipped, current focus, last refreshed" width="100%" />
+<img src="assets/ticker.svg?v=202610300712" alt="Last shipped, current focus, last refreshed" width="100%" />
 
 Systems are transitioning from single-threaded demos to enterprise-scale AI platforms where
 reliability, high throughput, and fault tolerance are non-negotiable. That shift requires
 engineers who obsess over performance engineering, distributed orchestration, bottlenecks,
 and observability as much as model capability. That's the work I do.
 
-<img align="right" src="assets/loadtest.svg?v=202610281639" width="240" alt="Load test — throughput ramps while p99 latency holds under the SLA" />
+<img align="right" src="assets/loadtest.svg?v=202610300712" width="240" alt="Load test — throughput ramps while p99 latency holds under the SLA" />
 
 ### What that looks like in numbers
 
@@ -23,7 +23,7 @@ and observability as much as model capability. That's the work I do.
 
 <br clear="right" />
 
-<img src="assets/timeline.svg?v=202610281639" alt="Work timeline — Auditoria.AI, CVS Health, Invest4Edu, Parexel, SS&C, NCR, Infibeam, Zensar" width="100%" />
+<img src="assets/timeline.svg?v=202610300712" alt="Work timeline — Auditoria.AI, CVS Health, Invest4Edu, Parexel, SS&C, NCR, Infibeam, Zensar" width="100%" />
 
 ### Building
 
@@ -41,22 +41,22 @@ Issues and pull requests filed upstream — mostly orchestration edge cases and 
 modes found while building on these.
 
 <p>
-<a href="https://github.com/langchain-ai/langgraph"><img src="assets/oss/langchain-ai.svg?v=202610281639" height="58" alt="LangGraph" /></a>
-<a href="https://github.com/browser-use/browser-use"><img src="assets/oss/browser-use.svg?v=202610281639" height="58" alt="Browser Use" /></a>
-<a href="https://github.com/langfuse/langfuse"><img src="assets/oss/langfuse.svg?v=202610281639" height="58" alt="Langfuse" /></a>
-<a href="https://github.com/groq/groq-python"><img src="assets/oss/groq.svg?v=202610281639" height="58" alt="Groq" /></a>
-<a href="https://github.com/neondatabase/neon"><img src="assets/oss/neondatabase.svg?v=202610281639" height="58" alt="Neon Postgres" /></a>
-<a href="https://github.com/rudderlabs/rudder-server"><img src="assets/oss/rudderlabs.svg?v=202610281639" height="58" alt="RudderStack" /></a>
-<a href="https://github.com/googleapis/python-bigquery"><img src="assets/oss/googleapis.svg?v=202610281639" height="58" alt="Google BigQuery" /></a>
+<a href="https://github.com/langchain-ai/langgraph"><img src="assets/oss/langchain-ai.svg?v=202610300712" height="58" alt="LangGraph" /></a>
+<a href="https://github.com/browser-use/browser-use"><img src="assets/oss/browser-use.svg?v=202610300712" height="58" alt="Browser Use" /></a>
+<a href="https://github.com/langfuse/langfuse"><img src="assets/oss/langfuse.svg?v=202610300712" height="58" alt="Langfuse" /></a>
+<a href="https://github.com/groq/groq-python"><img src="assets/oss/groq.svg?v=202610300712" height="58" alt="Groq" /></a>
+<a href="https://github.com/neondatabase/neon"><img src="assets/oss/neondatabase.svg?v=202610300712" height="58" alt="Neon Postgres" /></a>
+<a href="https://github.com/rudderlabs/rudder-server"><img src="assets/oss/rudderlabs.svg?v=202610300712" height="58" alt="RudderStack" /></a>
+<a href="https://github.com/googleapis/python-bigquery"><img src="assets/oss/googleapis.svg?v=202610300712" height="58" alt="Google BigQuery" /></a>
 </p>
 
 ### Activity
 
-<img src="assets/activity.svg?v=202610281639" alt="Daily contribution activity over the last 12 months" width="100%" />
+<img src="assets/activity.svg?v=202610300712" alt="Daily contribution activity over the last 12 months" width="100%" />
 
-<img src="assets/stats.svg?v=202610281639" alt="Last 52 weeks — contributions, busiest week, repos, stars, upstream projects" width="100%" />
+<img src="assets/stats.svg?v=202610300712" alt="Last 52 weeks — contributions, busiest week, repos, stars, upstream projects" width="100%" />
 
-<img src="assets/lifetime.svg?v=202610281639" alt="All time — contributions, commits, pull requests, longest streak, per-year breakdown" width="100%" />
+<img src="assets/lifetime.svg?v=202610300712" alt="All time — contributions, commits, pull requests, longest streak, per-year breakdown" width="100%" />
 
 ### Stack
 
@@ -90,7 +90,7 @@ modes found while building on these.
 </p>
 <br clear="all" />
 
-<img align="left" src="assets/flamegraph.svg?v=202610281639" width="240" alt="CPU flame graph with the hot path highlighted" />
+<img align="left" src="assets/flamegraph.svg?v=202610300712" width="240" alt="CPU flame graph with the hot path highlighted" />
 
 Most of what I build starts as an architectural question under load — so I benchmark it,
 stress it, and engineer what survives. Everything above refreshes itself nightly from
