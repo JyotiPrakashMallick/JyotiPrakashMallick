@@ -88,6 +88,13 @@ modes found while building on these.
 <img src="assets/stack/azure.svg?v=202610281639" height="64" alt="Azure" />
 <img src="assets/stack/githubactions.svg?v=202610281639" height="64" alt="GitHub Actions" />
 </p>
+
+### Languages
+
+<p>
+<img src="assets/lang/japanese.svg?v=202610281639" height="58" alt="Japanese — JLPT N4" />
+<img src="assets/lang/spanish.svg?v=202610281639" height="58" alt="Spanish — Intermediate" />
+</p>
 <br clear="all" />
 
 <img align="left" src="assets/flamegraph.svg?v=202610300712" width="240" alt="CPU flame graph with the hot path highlighted" />

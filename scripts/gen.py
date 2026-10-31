@@ -9,6 +9,7 @@ Self-contained design system:
   loadtest.svg      illustration - throughput ramp with p99 under the SLA
   flamegraph.svg    illustration - CPU flame graph with the hot path lit
   oss/*.svg         one chip per upstream project, real logo embedded
+  lang/*.svg        spoken languages with proficiency level
   activity.svg      daily contribution graph over 12 months
   stats.svg         last-52-weeks totals and language mix
   lifetime.svg      all-time totals since 2014, with a per-year breakdown
@@ -89,6 +90,11 @@ OSS = [
     ("neondatabase", "Neon Postgres", "serverless postgres"),
     ("rudderlabs", "RudderStack", "data pipelines"),
     ("googleapis", "Google BigQuery", "data warehouse"),
+]
+
+LANGUAGES = [
+    ("flag-jp", "Japanese", "jlpt n4"),
+    ("flag-es", "Spanish", "intermediate"),
 ]
 
 STACK = [
@@ -356,28 +362,43 @@ def link_chip(label, filled):
 
 
 # --------------------------------------------------------------- stack badges
+def icon_svg(slug, x, y, size):
+    icon_path = ASSETS / "icons" / f"{slug}.svg"
+    if not icon_path.exists():
+        return ""
+    raw = icon_path.read_text(encoding="utf-8")
+    root = re.search(r"<svg([^>]*)>", raw)
+    vb = re.search(r'viewBox="([^"]+)"', root.group(1)).group(1)
+    fill = re.search(r'\sfill="([^"]+)"', root.group(1))
+    inner = re.sub(r"<title>.*?</title>", "", raw[root.end():raw.rindex("</svg>")])
+    if fill:
+        inner = f'<g fill="{fill.group(1)}">{inner}</g>'
+    return (
+        f'<svg x="{x}" y="{y}" width="{size}" height="{size}" viewBox="{vb}" '
+        f'preserveAspectRatio="xMidYMid meet">{inner}</svg>'
+    )
+
+
 def stack_badge(slug, label):
     W, H = 80, 64
     css = f"""{theme_vars()}{BASE_CSS}"""
-    mark = ""
-    icon_path = ASSETS / "icons" / f"{slug}.svg"
-    if icon_path.exists():
-        raw = icon_path.read_text(encoding="utf-8")
-        root = re.search(r"<svg([^>]*)>", raw)
-        vb = re.search(r'viewBox="([^"]+)"', root.group(1)).group(1)
-        fill = re.search(r'\sfill="([^"]+)"', root.group(1))
-        inner = re.sub(r"<title>.*?</title>", "", raw[root.end():raw.rindex("</svg>")])
-        if fill:
-            inner = f'<g fill="{fill.group(1)}">{inner}</g>'
-        mark = (
-            f'<svg x="{W / 2 - 11}" y="14" width="22" height="22" viewBox="{vb}" '
-            f'preserveAspectRatio="xMidYMid meet">{inner}</svg>'
-        )
+    mark = icon_svg(slug, W / 2 - 11, 14, 22)
     body = f"""<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="6" class="card"/>
 <rect x="{W / 2 - 16}" y="9" width="32" height="32" rx="7" fill="#ffffff"/>
 {mark}
 <text x="{W / 2}" y="54" text-anchor="middle" class="b tx" font-size="10.5">{esc(label)}</text>"""
     return svg(W, H, css, body, label)
+
+
+def language_chip(flag, name, level):
+    W, H = 196, 58
+    css = f"""{theme_vars()}{BASE_CSS}"""
+    body = f"""<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="5" class="card"/>
+{icon_svg(flag, 14, 15, 28)}
+<circle cx="28" cy="29" r="14" fill="none" stroke="var(--bd)" stroke-width="1"/>
+<text x="54" y="29" class="b tx" font-size="12.5">{esc(name)}</text>
+<text x="54" y="42" class="m lab mu">{esc(level.upper())}</text>"""
+    return svg(W, H, css, body, f"{name} — {level}")
 
 
 # ---------------------------------------------------------------------- ticker
@@ -689,7 +710,7 @@ def lifetime(d):
 def main():
     print("Collecting telemetry from GitHub...")
     d = collect()
-    for sub in ("links", "oss", "stack"):
+    for sub in ("links", "oss", "stack", "lang"):
         (ASSETS / sub).mkdir(parents=True, exist_ok=True)
 
     written = []
@@ -716,6 +737,8 @@ def main():
         put(f"oss/{org}.svg", oss_chip(org, name, what))
     for slug, label in STACK:
         put(f"stack/{slug}.svg", stack_badge(slug, label))
+    for flag, name, level in LANGUAGES:
+        put(f"lang/{name.lower()}.svg", language_chip(flag, name, level))
 
     print("\nGenerated assets:")
     for name, size in written:
