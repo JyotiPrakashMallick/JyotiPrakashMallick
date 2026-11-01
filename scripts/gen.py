@@ -79,7 +79,8 @@ LINKS = [
     ("PORTFOLIO", "https://jyotiprakash.github.io/", True),
     ("LINKEDIN", "https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/", False),
     ("STACK OVERFLOW", "https://stackoverflow.com/users/6623265/jyoti-prakash-mallick", False),
-    ("RÉSUMÉ", "https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/", False),
+    ("RÉSUMÉ", "https://bit.ly/48qkwlX", False),
+    ("PROFILE", "https://jyotiprakashmallick.github.io/", False),
 ]
 
 OSS = [
