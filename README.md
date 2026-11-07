@@ -18,9 +18,9 @@ and observability as much as model capability. That's the work I do.
 
 ### What that looks like in numbers
 
-- **Sub-100ms P99 latency SLAs** across distributed AI microservices handling millions of daily records and real-time transaction streams.
-- **Automated enterprise load testing harnesses** with custom JMeter telemetry listeners streaming real-time metrics to Azure Cosmos DB & SQL Server.
-- **2,000+ reputation & 80+ badges on Stack Overflow** contributing across cloud scalability, distributed architecture, and CI/CD pipelines.
+- **Sub-100ms P99 latency SLAs** across distributed AI microservices on AWS EKS & Azure handling millions of daily records and real-time transaction streams, scaled to 20,000+ concurrent API requests with latency cut 32% and server efficiency up 22.5%.
+- **Automated enterprise load testing harnesses** (JMeter, k6, Playwright) with custom JMeter telemetry listeners streaming real-time metrics to Azure Cosmos DB & SQL Server, gated in CI/CD and rolled out across 35% of Scrum teams: test coverage up 24%, production performance issues down 12%.
+- **2,000+ reputation & 80+ badges on Stack Overflow** contributing across cloud scalability, distributed architecture, and CI/CD pipelines, plus the open-source Test Results Reporter for JMeter (test insights to Slack & Teams).
 
 <br clear="right" />
 
