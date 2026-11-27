@@ -34,6 +34,8 @@ If something I've built is useful to you, or wrong, feel free to open an issue o
 
 <br clear="all" />
 
+### Career Trajectory
+
 <img src="assets/timeline.svg?v=202611260935" alt="Work timeline — Auditoria.AI, CVS Health, Invest4Edu, Parexel, SS&C, NCR, Infibeam, Zensar" width="100%" />
 
 ### Building
