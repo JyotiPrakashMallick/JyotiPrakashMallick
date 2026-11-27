@@ -427,7 +427,7 @@ def ticker(d):
 
 # -------------------------------------------------------------------- timeline
 def timeline():
-    row, top, axis = 68, 60, 214
+    row, top, axis = 68, 18, 214
     H = top + row * len(TIMELINE) + 8
     css = f"""{font_face('Inter')}{theme_vars()}{BASE_CSS}
     .role{{font-size:17px;font-weight:500}}
