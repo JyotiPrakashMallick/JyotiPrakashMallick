@@ -24,6 +24,16 @@ and observability as much as model capability. That's the work I do.
 
 <br clear="right" />
 
+<img align="left" src="assets/flamegraph.svg?v=202611260935" width="240" alt="CPU flame graph with the hot path highlighted" />
+
+Most of what I build starts as an architectural question under load — so I benchmark it,
+stress it, and engineer what survives. Everything on this page refreshes itself nightly from
+the GitHub API; nothing here is a badge service.
+
+If something I've built is useful to you, or wrong, feel free to open an issue or connect.
+
+<br clear="all" />
+
 <img src="assets/timeline.svg?v=202611260935" alt="Work timeline — Auditoria.AI, CVS Health, Invest4Edu, Parexel, SS&C, NCR, Infibeam, Zensar" width="100%" />
 
 ### Building
@@ -96,16 +106,6 @@ modes found while building on these.
 <img src="assets/lang/japanese.svg?v=202611260935" height="58" alt="Japanese — JLPT N4" />
 <img src="assets/lang/spanish.svg?v=202611260935" height="58" alt="Spanish — Intermediate" />
 </p>
-<br clear="all" />
-
-<img align="left" src="assets/flamegraph.svg?v=202611260935" width="240" alt="CPU flame graph with the hot path highlighted" />
-
-Most of what I build starts as an architectural question under load — so I benchmark it,
-stress it, and engineer what survives. Everything above refreshes itself nightly from
-the GitHub API; nothing here is a badge service.
-
-If something I've built is useful to you, or wrong, feel free to open an issue or connect.
-
 <br clear="all" />
 
 <!-- CONTRIBUTIONS:START -->
